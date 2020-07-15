@@ -17,9 +17,9 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    #импорт правил из приложения posts
+    #import rules from posts application
     path("", include("posts.urls")),
     path("group/", include("posts.urls")),
-    #импорт правил из приложения admin
+    #import rules from admin application
     path('admin/', admin.site.urls),
 ]
