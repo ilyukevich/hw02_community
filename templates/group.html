@@ -3,19 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Записи сообщества {{ post.group.slug }} | Yatube</title>
+    <title>Записи сообщества {{ group.slug }} | Yatube</title>
   </head>
   <body>
+  <h1>{{ group.slug }}</h1>
+  <p>{{ group.slug }}</p>
   {% for post in posts %}
-  <h1>{{ post.author.get_full_name }}</h1>
-  <p>
-        Цитаты {{ post.author.get_full_name }}
-  </p>
-
-  <h3>
-        Автор: {{ post.author.get_full_name }}, Дата публикации: {{ post.pub_date|date:"d M Y" }}
-  </h3>
+  <h3>Автор: {{ post.author }}, дата публикации: {{ post.pub_date|date:"d M Y" }}</h3>
   <p>{{ post.text|linebreaksbr }}</p>
+  <hr>
   {% endfor %}
 
   </body>
